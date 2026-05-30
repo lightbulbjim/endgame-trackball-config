@@ -17,10 +17,10 @@
 #endif
 
 #define TWIST_MULTIPLIER   1
-#define TWIST_DIVISOR      16
+#define TWIST_DIVISOR      32
 
 #define SCROLL_MULTIPLIER  1
-#define SCROLL_DIVISOR     16
+#define SCROLL_DIVISOR     32
 
 #define SNIPE_MULTIPLIER   1
 #define SNIPE_DIVISOR      4
@@ -126,8 +126,7 @@
 			layers = <LAYER_SCROLL>;
 			input-processors = <&zip_xy_scaler SCROLL_MULTIPLIER SCROLL_DIVISOR>, <&zip_axis_clamper>,
 							   <&zip_xy_to_scroll_mapper>, <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>,
-							   <&zip_dragscroll_accel>, <&zip_rotate_scroll>,
-							   <&esb_ip>, <&zip_ble_report_rate_limit>;
+							   <&zip_rotate_scroll>, <&esb_ip>, <&zip_ble_report_rate_limit>;
 		};
 
 		snipe {
