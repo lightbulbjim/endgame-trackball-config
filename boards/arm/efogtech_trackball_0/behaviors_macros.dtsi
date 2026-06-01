@@ -236,5 +236,14 @@
 			#binding-cells = <0>;
 			bindings = <&winlin_undo>, <&macos_undo>;
 		};
+
+        mo_tog: mo_tog {
+			compatible = "zmk,behavior-hold-tap";
+			display-name = "Layer Momentary-Toggle";
+			#binding-cells = <2>;
+			flavor = "hold-preferred";
+			tapping-term-ms = <200>;
+			bindings = <&mo>, <&tog>;
+        };
 	};
 };
